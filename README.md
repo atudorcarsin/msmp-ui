@@ -7,7 +7,7 @@ User Interface for the [Minecraft Server Management Protocol API](https://minecr
 > Use at your own risk.
 
 ## Features
-- [x] Ability to connect to MSMP API server <br/>
+- [x] Ability to connect to MSMP API server <br/> <br/>
 Implement the following management features:
 - [ ] Simple and clean homepage
 - [ ] Whitelist
@@ -16,6 +16,6 @@ Implement the following management features:
 - [ ] Operators
 - [ ] Server status, saving, stopping, console messages
 - [ ] Server settings (including gamerules)
-- [ ] Receiving notifications from server <br/>
+- [ ] Receiving notifications from server <br/> <br/>
 Bonus:
 - [ ] Docker support
