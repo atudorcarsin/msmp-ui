@@ -3,17 +3,22 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from "react-router";
 import './main.css'
 import { ThemeProvider } from "@/components/theme-provider"
-import App from './App.tsx'
+import AppLayout from './AppLayout.tsx'
 import Config from './Config.tsx'
+import Home from './Home.tsx'
 
 import './websocket.ts'
+import Whitelist from "@/Whitelist.tsx";
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
           <BrowserRouter>
               <Routes>
-                  <Route path="/" element={<App />} />
+                  <Route path="/" element={<AppLayout />}>
+                      <Route path="home" element={<Home/>} />
+                      <Route path="whitelist" element={<Whitelist/>} />
+                  </Route>
                   <Route path="config" element={<Config />} />
               </Routes>
           </BrowserRouter>

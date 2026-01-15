@@ -46,6 +46,11 @@ else {
             console.log("Successfully connected to MSMP Proxy WebSocket");
         };
 
+        ws.onmessage = (e: MessageEvent) => {
+            console.log("Received message from MSMP Proxy WebSocket");
+            console.log(e.data);
+        }
+
         ws.onerror = (e) => {
             console.error("WebSocket error:", e);
         };

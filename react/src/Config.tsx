@@ -8,6 +8,7 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
+import {ModeToggle} from "@/components/mode-toggle.tsx";
 import {Button} from "@/components/ui/button"
 import {Label} from "@/components/ui/label"
 import {Input} from "@/components/ui/input"
@@ -77,6 +78,9 @@ function Config() {
 
     return (
         <>
+            <div className="absolute top-3 right-3">
+                <ModeToggle />
+            </div>
             <div className="flex items-center justify-center py-30">
                 <Card className="w-[28rem]">
                     <CardHeader>
@@ -112,7 +116,7 @@ function Config() {
 
                         {
                             isConnected && (
-                                <a href="/">
+                                <a href="/home">
                                     <Button>Return to home</Button>
                                 </a>
                             )
