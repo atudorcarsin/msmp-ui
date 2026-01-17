@@ -13,7 +13,6 @@ import {
   UserCheck,
 } from "lucide-react"
 
-import { NavLinks } from "@/components/nav-links.tsx"
 import { NavMain } from "@/components/nav-main"
 import { NavSecondary } from "@/components/nav-secondary"
 import { ServerSwitcher } from "@/components/server-switcher.tsx"
@@ -23,6 +22,7 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar"
+import {useLocation} from "react-router";
 
 // This is sample data.
 const data = {
@@ -82,13 +82,20 @@ const data = {
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const location = useLocation()
+
+  const navMainData = data.navMain.map(item => ({
+    ...item,
+    isActive: location.pathname === item.url
+  }))
+
   return (
     <Sidebar className="border-r-0" {...props}>
       <SidebarHeader>
         <ServerSwitcher servers={data.teams} />
       </SidebarHeader>
       <SidebarContent className="ml-2">
-        <NavMain items={data.navMain} />
+        <NavMain items={navMainData} />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarRail />
