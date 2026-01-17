@@ -5,6 +5,7 @@ import {
   Ban,
   HardDrive,
   Home,
+  MapPinOff,
   Search,
   Server,
   Settings2,
@@ -54,6 +55,11 @@ const data = {
       icon: Ban,
     },
     {
+      title: "IP Bans",
+      url: "/ip-bans",
+      icon: MapPinOff,
+    },
+    {
       title: "Operators",
       url: "/operators",
       icon: ShieldUser,
@@ -72,13 +78,6 @@ const data = {
       icon: Settings2,
     },
   ],
-  links: [
-    {
-      name: "Project Management & Task Tracking",
-      url: "#",
-      emoji: "📋",
-    },
-  ],
 
 }
 
@@ -87,10 +86,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     <Sidebar className="border-r-0" {...props}>
       <SidebarHeader>
         <ServerSwitcher servers={data.teams} />
-        <NavMain items={data.navMain} />
       </SidebarHeader>
-      <SidebarContent>
-        <NavLinks links={data.links} />
+      <SidebarContent className="ml-2">
+        <NavMain items={data.navMain} />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarRail />

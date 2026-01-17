@@ -230,7 +230,7 @@ function Whitelist() {
                                         <AlertDialogHeader>
                                             <AlertDialogTitle>Are you sure?</AlertDialogTitle>
                                             <AlertDialogDescription>
-                                                This will remove {player.name} from the whitelist. This action cannot be undone.
+                                                This will remove {player.name} from the whitelist.
                                             </AlertDialogDescription>
                                         </AlertDialogHeader>
                                         <AlertDialogFooter>
