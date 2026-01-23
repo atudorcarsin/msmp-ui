@@ -13,7 +13,7 @@ User Interface for the [Minecraft Server Management Protocol API](https://minecr
 Implement the following management features:
   - [ ] Simple and clean homepage
   - [x] Whitelist
-  - [ ] Player/IP Bans
+  - [x] Player/IP Bans
   - [ ] Player list/kicks
   - [ ] Operators
   - [ ] Server status, saving, stopping, console messages
