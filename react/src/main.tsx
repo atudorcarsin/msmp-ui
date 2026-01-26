@@ -9,6 +9,7 @@ import Home from './Home.tsx'
 import Whitelist from "@/Whitelist.tsx";
 import Bans from "@/Bans.tsx";
 import IPBans from "@/IPBans.tsx";
+import Operators from "@/Operators.tsx";
 
 import './websocket.ts'
 
@@ -22,6 +23,7 @@ createRoot(document.getElementById('root')!).render(
                       <Route path="whitelist" element={<Whitelist/>} />
                       <Route path="bans" element={<Bans/>} />
                       <Route path="ip-bans" element={<IPBans/>} />
+                      <Route path="operators" element={<Operators/>} />
                   </Route>
                   <Route path="config" element={<Config />} />
               </Routes>
