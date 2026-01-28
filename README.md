@@ -16,7 +16,7 @@ Implement the following management features:
   - [x] Player/IP Bans
   - [ ] Player list/kicks
   - [x] Operators
-  - [ ] Server status, saving, stopping, console messages
+  - [x] Server status, saving, stopping, console messages
   - [ ] Server settings (including gamerules)
   - [x] Receiving notifications from server
 <br/>
