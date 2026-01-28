@@ -10,6 +10,7 @@ import {
   Server,
   Settings2,
   ShieldUser,
+  User,
   UserCheck,
 } from "lucide-react"
 
@@ -65,11 +66,15 @@ const data = {
       icon: ShieldUser,
     },
     {
+      title: "Online Players",
+      url: "/players",
+      icon: User,
+    },
+    {
       title: "Server",
       url: "/server",
       icon: HardDrive,
-    }
-
+    },
   ],
   navSecondary: [
     {

@@ -18,7 +18,7 @@ Implement the following management features:
   - [x] Operators
   - [ ] Server status, saving, stopping, console messages
   - [ ] Server settings (including gamerules)
-  - [ ] Receiving notifications from server
+  - [x] Receiving notifications from server
 <br/>
 
 Bonus:
