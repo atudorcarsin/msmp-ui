@@ -21,9 +21,18 @@ import {
     AlertDialogContent, AlertDialogDescription, AlertDialogFooter,
     AlertDialogHeader,
     AlertDialogTitle,
-    AlertDialogTrigger
+    AlertDialogTrigger,
 } from "@/components/ui/alert-dialog.tsx";
 
+import Autosave from "@/components/Autosave.tsx";
+import Whitelist from "@/components/Whitelist.tsx";
+import EnforceWhitelist from "@/components/EnforceWhitelist.tsx";
+import AllowFlight from "@/components/AllowFlight.tsx";
+import ForceGamemode from "@/components/ForceGamemode.tsx";
+import AcceptTransfers from "@/components/AcceptTransfers.tsx";
+import HideOnlinePlayers from "@/components/HideOnlinePlayers.tsx";
+import StatusReplies from "@/components/StatusReplies.tsx";
+import Difficulty from "@/components/Difficulty.tsx";
 
 function Server() {
     const idRef = useRef(1);
@@ -191,6 +200,21 @@ function Server() {
                     </CardFooter>
                 </Card>
             </div>
+
+            <h2 className="mt-3 text-xl">Server Settings</h2>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-2 bg-gray-800 p-3 rounded-lg mb-2">
+                <Autosave/>
+                <Whitelist/>
+                <EnforceWhitelist/>
+                <AllowFlight/>
+                <ForceGamemode/>
+                <AcceptTransfers/>
+                <HideOnlinePlayers/>
+                <StatusReplies/>
+            </div>
+
+            <Difficulty/>
+
         </div>
     );
 
